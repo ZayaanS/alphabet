@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	 <!--Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+	<style type="text/css">
+
+		body{
+			background-color: #C3F4F6;
+		}
+
+		.letterBlock{
+			height: 150px;
+			width: 150px;
+			font-size: 100px;
+			color: #ffffff;
+			background-color: #22a2e3;
+			text-align: center;
+			text-shadow: 1.5px 1.5px 2px #545454;
+			padding-top: 0;
+		}
+		.btn:nth-child(1), .btn:nth-child(10), .btn:nth-child(19){
+			background-color: #e74c3c !important;
+			box-shadow: 0 0 0 1px #c73e30 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 5px 0 0 #c73e30, 0 5px 5px 1px rgba(0, 0, 0, 0.5) !important;
+		}
+		.btn:nth-child(2), .btn:nth-child(11), .btn:nth-child(20){
+			background-color: #FF914D !important;
+			box-shadow: 0 0 0 1px #e67b39 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 5px 0 0 #e67b39, 0 5px 5px 1px rgba(0, 0, 0, 0.5) !important;
+		}
+		.btn:nth-child(3), .btn:nth-child(12), .btn:nth-child(21){
+			background-color: #FFDE59 !important;
+			box-shadow: 0 0 0 1px #edcc45 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 5px 0 0 #edcc45, 0 5px 5px 1px rgba(0, 0, 0, 0.5) !important;
+		}
+		.btn:nth-child(4), .btn:nth-child(13), .btn:nth-child(22){
+			background-color: #C9E265 !important;
+			box-shadow: 0 0 0 1px #b0c94d inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 5px 0 0 #b0c94d, 0 5px 5px 1px rgba(0, 0, 0, 0.5) !important;
+		}
+		.btn:nth-child(5), .btn:nth-child(14), .btn:nth-child(23){
+			background-color: #7ED957 !important;
+			box-shadow: 0 0 0 1px #68c740 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 5px 0 0 #68c740, 0 5px 5px 1px rgba(0, 0, 0, 0.5) !important;
+		}
+		.btn:nth-child(6), .btn:nth-child(15), .btn:nth-child(24){
+			background-color: #5CE1E6 !important;
+			box-shadow: 0 0 0 1px #49d1d6 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 5px 0 0 #49d1d6, 0 5px 5px 1px rgba(0, 0, 0, 0.5) !important;
+		}
+		.btn:nth-child(7), .btn:nth-child(16), .btn:nth-child(25){
+			background-color: #5271FF !important;
+			box-shadow: 0 0 0 1px #4361e8 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 5px 0 0 #4361e8, 0 5px 5px 1px rgba(0, 0, 0, 0.5) !important;
+		}
+		.btn:nth-child(8), .btn:nth-child(17), .btn:nth-child(26){
+			background-color: #CB6CE6 !important;
+			box-shadow: 0 0 0 1px #b859d4 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 5px 0 0 #b859d4, 0 5px 5px 1px rgba(0, 0, 0, 0.5) !important;
+		}
+		.btn:nth-child(9), .btn:nth-child(18){
+			background-color: #FF5757 !important;
+			box-shadow: 0 0 0 1px #f04a4a inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 5px 0 0 #f04a4a, 0 5px 5px 1px rgba(0, 0, 0, 0.5) !important;
+		}
+		.btn3d {
+			position: relative;
+			top: -6px;
+			border: 0;
+			transition: all 40ms linear;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-left: 2px;
+			margin-right: 2px;
+		}
+
+		.btn3d:active:focus,
+		.btn3d:focus:hover,
+		.btn3d:focus {
+			-moz-outline-style: none;
+			outline: medium none;
+		}
+		
+		.btn3d:active,
+		.btn3d.active {
+			top: 2px;
+		}
+		.btn3d.btn-primary {
+			box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 5px 0 0 #4D5BBE, 0 5px 5px 1px rgba(0, 0, 0, 0.5);
+			background-color: #4274D7;
+		}
+
+		.btn3d.btn-primary:active,
+		.btn3d.btn-primary.active {
+			box-shadow: 0 0 0 1px #417fbd inset, 0 0 0 1px rgba(255, 255, 255, 0.15) inset, 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+			background-color: #4274D7;
+		}
+
+		.animate-right{
+			animation-name: burstRight;
+    	    animation-duration: 500ms;
+   		    animation-timing-function: linear;
+		}
+		@keyframes burstRight{
+			0%{
+				transform: scale(1);
+				}
+			100%{
+				transform: translate(15px, -80px);
+			}
+		}
+		.animate-left{
+			animation-name: burstLeft;
+    	    animation-duration: 500ms;
+   		    animation-timing-function: linear;
+		}
+		@keyframes burstLeft{
+			0%{
+				transform: scale(1);
+				}
+			100%{
+				transform: translate(-15px, -70px);
+			}
+		}
+		.animate-up{
+			animation-name: burstUp;
+    	    animation-duration: 500ms;
+   		    animation-timing-function: linear;
+		}
+		@keyframes burstUp{
+			0%{
+				transform: scale(1);
+				}
+			40%{
+				transform: scale(1);
+			}
+			100%{
+				transform: translateY(-40px);
+			}
+			*/
+		}
+
+		#Frog{
+			height: 200px;
+			position: absolute;
+			bottom: 10px;
+			right: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="alphabet" style="margin-top: 100px; margin-left: 55px;">
+		<button id="A" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">A</button>
+		<button id="B" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">B</button>
+		<button id="C" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">C</button>
+		<button id="D" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">D</button>
+		<button id="E" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">E</button>
+		<button id="F" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">F</button>
+		<button id="G" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">G</button>
+		<button id="H" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">H</button>
+		<button id="I" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">I</button>
+		<button id="J" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">J</button>
+		<button id="K" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">K</button>
+		<button id="L" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">L</button>
+		<button id="M" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">M</button>
+		<button id="N" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">N</button>
+		<button id="O" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">O</button>
+		<button id="P" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">P</button>
+		<button id="Q" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">Q</button>
+		<button id="R" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">R</button>
+		<button id="S" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">S</button>
+		<button id="T" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">T</button>
+		<button id="U" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">U</button>
+		<button id="V" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">V</button>
+		<button id="W" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">W</button>
+		<button id="X" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">X</button>
+		<button id="Y" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">Y</button>
+		<button id="Z" onclick="yay(this)" type="button" class="btn btn-primary btn-lg btn3d letterBlock">Z</button>
+
+		<audio id="AudioA"><source src="8d82b5_Letter_A_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioB"><source src="8d82b5_Letter_B_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioC"><source src="8d82b5_Letter_C_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioD"><source src="8d82b5_Letter_D_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioE"><source src="8d82b5_Letter_E_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioF"><source src="8d82b5_Letter_F_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioG"><source src="8d82b5_Letter_G_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioH"><source src="8d82b5_Letter_H_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioI"><source src="8d82b5_Letter_I_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioJ"><source src="8d82b5_Letter_J_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioK"><source src="8d82b5_Letter_K_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioL"><source src="8d82b5_Letter_L_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioM"><source src="8d82b5_Letter_M_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioN"><source src="8d82b5_Letter_N_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioO"><source src="8d82b5_Letter_O_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioP"><source src="8d82b5_Letter_P_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioQ"><source src="8d82b5_Letter_Q_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioR"><source src="8d82b5_Letter_R_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioS"><source src="8d82b5_Letter_S_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioT"><source src="8d82b5_Letter_T_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioU"><source src="8d82b5_Letter_U_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioV"><source src="8d82b5_Letter_V_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioW"><source src="8d82b5_Letter_W_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioX"><source src="8d82b5_Letter_X_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioY"><source src="8d82b5_Letter_Y_Sound_Effect.mp3" type="audio/mpeg"></audio>
+		<audio id="AudioZ"><source src="8d82b5_Letter_Z_Sound_Effect.mp3" type="audio/mpeg"></audio>
+	</div>
+
+	<img onclick="Ribbit()" id="Frog" src="frog.png" />
+	<audio id="AudioFrog"><source src="frog.mp3" type="audio/mpeg"></audio>
+
+	<script type="text/javascript">
+		function yay(item){
+
+			//make left star
+			var leftStar = document.createElement("IMG");
+			leftStar.src = "star.png";
+			leftStar.style.height = "50px";
+			leftStar.className = "animate-left";
+			leftStar.id = "starLeft";
+			leftStar.style.position = "absolute";
+			leftStar.style.top = `calc(${item.offsetTop}px + 20px)`;
+			leftStar.style.left = `calc(${item.offsetLeft}px - 10px)`;
+			document.body.appendChild(leftStar);
+
+
+			//make middle star
+			var middleStar = document.createElement("IMG");
+			middleStar.src = "star.png";
+			middleStar.style.height = "40px";
+			middleStar.className = "animate-up";
+			middleStar.id = "starMiddle";
+			middleStar.style.position = "absolute";
+			middleStar.style.top = `calc(${item.offsetTop}px - 5px)`;
+			middleStar.style.left = `calc(${item.offsetLeft}px + 55px)`;
+			document.body.appendChild(middleStar);
+
+			//make right star
+			var rightStar = document.createElement("IMG");
+			rightStar.src = "star.png";
+			rightStar.style.height = "60px";
+			rightStar.className = "animate-right";
+			rightStar.id = "starRight";
+			rightStar.style.position = "absolute";
+			rightStar.style.top = `calc(${item.offsetTop}px + 20px)`;
+			rightStar.style.left = `calc(${item.offsetLeft}px + 110px)`;
+			document.body.appendChild(rightStar);
+
+			//remove stars
+			setTimeout(removeStars, 500);
+
+
+			//play audio
+			document.getElementById(`Audio${item.id}`).play();
+
+
+		}
+		function removeStars(){
+			document.getElementById("starRight").remove();
+			document.getElementById("starLeft").remove();
+			document.getElementById("starMiddle").remove();
+		}
+		function Ribbit(){
+			document.getElementById("AudioFrog").play();
+		}
+	</script>
+</body>
+</html>
